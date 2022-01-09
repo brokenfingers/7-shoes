@@ -1,0 +1,119 @@
+/* base */
+@import '../base/base.css';
+
+/* 3rd-party */
+@import '../3rd-party/font-awesome.min.css';
+
+body {
+    display: grid;
+    grid-template-columns: 15px 1fr 15px;
+    grid-template-areas: '. main .';
+    background: linear-gradient(90deg, #eff2f9, #bebcd1);
+    min-height: 100vh;
+}
+
+:root {
+    --primary-col: #c30921;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: main;
+}
+
+.main header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.nav-menu {
+    display: none;
+    gap: 30px;
+}
+
+.personal-menu {
+    display: flex;
+    gap: 10px;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    width: max-content;
+}
+
+.nav-link:hover,
+.active {
+    color: var(--primary-col);
+}
+
+.content {
+    display: grid;
+
+    grid-template-areas:
+        'h1'
+        'description'
+        'price'
+        'button'
+        'socials';
+
+    background: url(../../img/shoes.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    overflow: hidden;
+}
+h1 {
+    grid-area: h1;
+    color: var(--primary-col);
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.description {
+    grid-area: description;
+}
+
+.price {
+    grid-area: price;
+}
+
+.price,
+.description {
+    color: #576679;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn {
+    grid-area: button;
+    color: #fff;
+    padding: 7px 16px;
+    background-color: var(--primary-col);
+    align-self: start;
+    justify-self: start;
+    text-decoration: none;
+}
+
+.socials {
+    grid-area: socials;
+}
+
+@media (min-width: 700px) {
+    body {
+        grid-template-columns: 1fr 600px 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        grid-template-columns: 1fr 900px 1fr;
+    }
+}
