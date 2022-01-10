@@ -14,11 +14,10 @@ Design: [Shoes](https://cdn.discordapp.com/attachments/850245533838868480/850247
 
 ## Project features
 
--   Github page
+-   Github
 -   Responsive design
 -   FontAwesome icons
 -   CSS background images
-
 
 ## Authors
 

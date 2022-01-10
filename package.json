@@ -1,0 +1,24 @@
+{
+    "name": "7-shoes",
+    "version": "1.0.0",
+    "description": "![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)",
+    "main": "index.js",
+    "scripts": {
+        "dev": "dead-server --port=3001 --host=localhost",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brokenfingers/7-shoes.git"
+    },
+    "keywords": [],
+    "author": "Andrius Akavickis",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/brokenfingers/7-shoes/issues"
+    },
+    "homepage": "https://github.com/brokenfingers/7-shoes#readme",
+    "devDependencies": {
+        "dead-server": "^1.0.3"
+    }
+}
