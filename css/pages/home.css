@@ -10,6 +10,7 @@ body {
     grid-template-areas: '. main .';
     background: linear-gradient(90deg, #eff2f9, #bebcd1);
     min-height: 100vh;
+    overflow: hidden;
 }
 
 :root {
@@ -20,6 +21,48 @@ main {
     flex-direction: column;
     justify-content: space-between;
     grid-area: main;
+    position: relative;
+}
+body::before {
+    content: '';
+    z-index: -1;
+    display: block;
+    height: 390px;
+    width: 390px;
+    background-color: #fda5b085;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    right: -246px;
+    animation-name: bubble-opacity;
+    animation-duration: 10s;
+}
+
+body::after {
+    content: '';
+    z-index: -1;
+    display: block;
+    height: 250px;
+    width: 250px;
+    background-color: #fcdee2a3;
+    position: absolute;
+    border-radius: 50%;
+    top: 240px;
+    left: -110px;
+    animation-name: bubble-opacity;
+    animation-duration: 7s;
+}
+
+@keyframes bubble-opacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .main header {
@@ -71,18 +114,18 @@ main {
         'price'
         'button'
         'socials';
-
     background: url(../../img/shoes.png);
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
     min-height: 400px;
-    overflow: hidden;
+    position: relative;
 }
+
 h1 {
     grid-area: h1;
     color: var(--primary-col);
-    font-size: 44px;
+    font-size: 59px;
     font-weight: bold;
 }
 
@@ -140,8 +183,11 @@ h1 {
 .socials {
     grid-area: socials;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     gap: 25px;
+    position: absolute;
+    right: 30px;
+    bottom: -100px;
 }
 .socials .social-link {
     color: #2e2c2f;
@@ -219,6 +265,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+        position: static;
     }
 }
 
