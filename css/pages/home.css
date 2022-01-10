@@ -42,12 +42,13 @@ main {
 .nav-personal {
     display: none;
     justify-self: end;
-    gap: 10px;
+    gap: 20px;
 }
 .nav-link {
     color: #fff;
     text-decoration: none;
     width: max-content;
+    text-transform: uppercase;
 }
 .hamburger {
     color: #fff;
@@ -87,6 +88,7 @@ h1 {
 
 .description {
     grid-area: description;
+    width: 80%;
 }
 
 .price {
@@ -101,6 +103,8 @@ h1 {
 }
 
 .btn {
+    display: flex;
+    justify-content: space-between;
     grid-area: button;
     color: #fff;
     padding: 7px 16px;
@@ -108,6 +112,29 @@ h1 {
     align-self: start;
     justify-self: start;
     text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn > i {
+    background-color: #2a2335;
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    padding: 7px 24px 7px 10px;
+    margin-right: -16px;
+    bottom: 0;
+    left: 100%;
+    transition: all 0.2s;
+}
+
+.btn:hover i {
+    padding-left: 20px;
+    padding-right: 28px;
+}
+
+.btn:hover {
+    background-color: #e02f46;
 }
 
 .socials {
@@ -136,6 +163,33 @@ h1 {
 
 .socials .social-link:hover {
     color: var(--primary-col);
+}
+
+footer {
+    padding: 20px 0;
+}
+
+.pages {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 150px;
+    color: var(--primary-col);
+    position: relative;
+    border-bottom: 3px solid #c2b6b8;
+}
+
+.pages::after {
+    content: '';
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+
+    background-color: var(--primary-col);
+    position: absolute;
+    top: 100%;
 }
 
 @media (min-width: 700px) {
