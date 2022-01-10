@@ -23,6 +23,7 @@ main {
 }
 
 .main header {
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +31,7 @@ main {
 }
 
 .logo {
-    height: 35px;
+    height: 40px;
 }
 
 .nav-menu {
@@ -38,8 +39,9 @@ main {
     gap: 30px;
 }
 
-.personal-menu {
-    display: flex;
+.nav-personal {
+    display: none;
+    justify-self: end;
     gap: 10px;
 }
 .nav-link {
@@ -47,15 +49,21 @@ main {
     text-decoration: none;
     width: max-content;
 }
+.hamburger {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
 
 .nav-link:hover,
+.hamburger:hover,
 .active {
     color: var(--primary-col);
 }
 
 .content {
     display: grid;
-
+    gap: 20px;
     grid-template-areas:
         'h1'
         'description'
@@ -65,7 +73,7 @@ main {
 
     background: url(../../img/shoes.png);
     background-size: contain;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     min-height: 400px;
     overflow: hidden;
@@ -104,11 +112,59 @@ h1 {
 
 .socials {
     grid-area: socials;
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+}
+.socials .social-link {
+    color: #2e2c2f;
+    font-size: 20px;
+    line-height: 1em;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #2e2c2f;
+    border-radius: 50%;
+    text-decoration: none;
+    padding: 0.6em 1.4em 1.4em 0.6em;
+}
+
+.socials .social-link::before {
+    width: 100%;
+    height: 100%;
+    transform: translate(50%, 50%);
+}
+
+.socials .social-link:hover {
+    color: var(--primary-col);
 }
 
 @media (min-width: 700px) {
     body {
         grid-template-columns: 1fr 600px 1fr;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            'h1 socials'
+            'description socials'
+            'price socials'
+            'button socials';
+    }
+    .nav-menu {
+        display: flex;
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav-personal {
+        display: flex;
+    }
+    .socials {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
     }
 }
 
