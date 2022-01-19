@@ -42,13 +42,13 @@ body::after {
     content: '';
     z-index: -1;
     display: block;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     background-color: #fcdee2a3;
     position: absolute;
     border-radius: 50%;
     top: 330px;
-    left: 83px;
+    left: 80px;
     animation-name: bubble-opacity;
     animation-duration: 7s;
 }
